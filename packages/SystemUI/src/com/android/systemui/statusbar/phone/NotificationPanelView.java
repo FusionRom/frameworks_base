@@ -26,6 +26,12 @@ import android.util.EventLog;
 import android.util.Slog;
 import android.view.MotionEvent;
 import android.view.View;
+import android.database.ContentObserver;
+import android.content.ContentResolver;
+import android.provider.Settings;
+import android.net.Uri;
+import android.os.Handler;
+import android.widget.Toast; 
 import android.view.accessibility.AccessibilityEvent;
 
 import com.android.systemui.EventLogTags;
@@ -118,6 +124,11 @@ public class NotificationPanelView extends PanelView {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+    if (event.getActionMasked() == MotionEvent.ACTION_POINTER_DOWN && event.getPointerCount() > 1)
+    {
+      android.os.PowerManager pm = (android.os.PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
+      pm.goToSleep(android.os.SystemClock.uptimeMillis());
+    }  
         boolean shouldRecycleEvent = false;
         if (DEBUG_GESTURES) {
             if (event.getActionMasked() != MotionEvent.ACTION_MOVE) {
