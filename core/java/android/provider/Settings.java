@@ -3111,6 +3111,12 @@ public final class Settings {
          */
         public static final String STATUSBAR_BATTERY_BAR = "statusbar_battery_bar";
 
+	/**
+         * HALO size fraction, default is 1.0f (normal)
+         * @hide
+         */
+        public static final String HALO_SIZE = "halo_size";
+
         /**
          * @hide
          */
@@ -3120,6 +3126,62 @@ public final class Settings {
          * @hide
          */
         public static final String STATUSBAR_BATTERY_BAR_THICKNESS = "statusbar_battery_bar_thickness";
+
+	/**
+         * Whether or not to use the app sidebar
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_ENABLED = "app_sidebar_enabled";
+
+        /**
+         * User defined transparency level for sidebar
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_TRANSPARENCY = "app_sidebar_transparency";
+
+	/**
+         * Disable text labels for app sidebar items
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_DISABLE_LABELS = "app_sidebar_disable_labels";
+
+       /**
+         * Position of app sidebar
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_POSITION = "app_sidebar_position";
+
+        /**
+         * Width of the appbar trigger
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_TRIGGER_WIDTH = "app_sidebar_trigger_width";
+ 
+         /**
+          * Position of appbar sidebar
+          *
+          * @hide
+          */
+        public static final String APP_SIDEBAR_TRIGGER_TOP = "app_sidebar_trigger_top";
+ 
+         /**
+         * Height of the appbar trigger
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_TRIGGER_HEIGHT = "app_sidebar_trigger_height";
+
+        /**
+         * Whether to display the trigger region or not
+         *
+         * @hide
+         */
+        public static final String APP_SIDEBAR_SHOW_TRIGGER = "app_sidebar_show_trigger";
 
         /**
          * @hide
@@ -3630,6 +3692,37 @@ public final class Settings {
           * @hide
           */
          public static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
+
+       /**
+         * HALO enabled, should default to 0 (HALO is disabled)
+         * @hide
+         */
+        public static final String HALO_ENABLED = "halo_enabled";
+
+        /**
+         * HALO pause activities?, defaults to 0 (no, do not pause) on devices which isLargeRAM() == true
+         * otherwise it defaults to 1 (yes, do pause)
+         * @hide
+         */
+        public static final String HALO_PAUSE = "halo_pause";
+
+        /**
+         * HALO, should default to 0 (no, do not show)
+         * @hide
+         */
+        public static final String HALO_ACTIVE = "halo_active";
+
+        /**
+         * HALO reversed?, should default to 1 (yes, reverse)
+         * @hide
+         */
+        public static final String HALO_REVERSED = "halo_reversed";
+
+        /**
+         * HALO hide?, should default to 0 (no, do not hide)
+         * @hide
+         */
+        public static final String HALO_HIDE = "halo_hide";
 
         /**
          * Whether to unlock the screen with the home key.  The value is boolean (1 or 0).
