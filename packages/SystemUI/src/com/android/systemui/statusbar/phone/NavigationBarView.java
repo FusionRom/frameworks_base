@@ -991,7 +991,7 @@ public class NavigationBarView extends LinearLayout implements BaseStatusBar.Nav
                 Settings.System.NAVIGATION_BAR_TINT, -2);
 
         mAlpha = 1 - Settings.System.getFloat(resolver,
-                Settings.System.NAVIGATION_BAR_ALPHA, 0.0f);
+                Settings.System.NAVIGATION_BAR_ALPHA, 1.0f);
 
         mAlphaMode = Settings.System.getInt(resolver,
                 Settings.System.STATUS_NAV_BAR_ALPHA_MODE, 1);
